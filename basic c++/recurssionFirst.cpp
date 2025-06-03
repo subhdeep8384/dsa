@@ -3,7 +3,7 @@ using namespace std ;
 
 string print(int n ) {
     if(n == 0 ){
-        return "Bhen chud gye" ;
+        return "soorrry" ;
     }
     cout<<"subhdeep" ;
     print(--n) ;
