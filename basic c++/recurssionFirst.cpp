@@ -5,7 +5,7 @@ string print(int n ) {
     if(n == 0 ){
         return "soorrry" ;
     }
-    cout<<"subhdeep" ;
+    cout<< n ;
     print(--n) ;
 }
 int main () {
