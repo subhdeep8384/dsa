@@ -19,10 +19,18 @@ int sum2(int n ){
     if(n == 0 )return 0 ;
     return n + sum2(n-1) ;
 }
+
+int factorial(int n){
+    if(n ==  0  || n == 1 ) return 1 ;
+    return n * factorial( n  -  1  ); 
+}
 int main(){
     int total = sum(10);
     int total1 = sum1(10) ;
     cout << total <<"  Total 1 is ::" << total1;
-    int total3 = sum2(10);
+    int total3 = sum2(5);
     cout << endl <<  total3 << endl ;
+
+    int fact = factorial(5);
+    cout<< "The factorial is Z::" << fact << endl ;
 }
