@@ -23,8 +23,18 @@ void reversePrint(int n , int lim ){
     cout << lim << endl ;
     reversePrint(n , lim - 1) ;
 }
+
+void revPrint(int i , int n ){
+    if( i < 1 ){
+        return ; 
+    }
+    revPrint(i -1 , n ) ;
+    cout << i << endl ;
+}
 int main() {
     // name(500 , "subhdeep");
-    reversePrint(1 , 10 );
+    // reversePrint(-11 , 10 );
+    // reversePrint(3 , 3);
+    revPrint(3 , 3);
     return 0 ;
 }
