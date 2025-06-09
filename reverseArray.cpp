@@ -12,12 +12,31 @@ int * reverseArray(int arr[] , int size ){
     }
     return arr ;
 } 
-int main() {
-    int arr[] = {1 ,2 ,3 ,4 ,6};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    int * newArr =  reverseArray(arr , size ) ;
 
-    for(int i = 0 ; i < size ; i++){
-        cout << newArr[i] << "  " ;
+void swap(int* arr, int left, int right) {
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+}
+
+int* reverseArrayRecurrsion(int arr[], int left, int right) {
+    if (left >= right) {
+        return arr;
     }
+
+    swap(arr, left, right);  
+    return reverseArrayRecurrsion(arr, left + 1, right - 1);  
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 6, 2 , 11};
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int* newArr = reverseArrayRecurrsion(arr, 0, size - 1);
+
+    for (int i = 0; i < size; i++) {
+        cout << newArr[i] << "  ";
+    }
+
+    return 0;
 }
