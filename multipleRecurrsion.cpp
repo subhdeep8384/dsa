@@ -17,6 +17,6 @@ int fibrecurssion(int n ){
     return fibrecurssion(n - 1 ) + fibrecurssion(n - 2);
 }
 int main() {
-    int f = fibrecurssion(30) ;
+    int f = fibrecurssion(3) ;
     cout << f ;
 }
