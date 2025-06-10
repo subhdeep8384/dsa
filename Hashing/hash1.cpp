@@ -2,12 +2,13 @@
 using namespace std ;
 int main() {
     int n ;
-
+    cout << "Enter the size of the array you wan to make " ;
     cin >> n ;
 
     int arr[n] ;
 
     for (int i = 0 ; i < n ; i++){
+        cout << "Enter the elements" ;
         cin >> arr[i] ;
     }
     
@@ -19,12 +20,14 @@ int main() {
 
 
     int q ; 
+    cout << "Enter how many number you want to search" ;
     cin >> q ;
     while(q--){
         int number ;
+        cout<<"Enter the number you want to search" ;
         cin >> number ;
 
-        cout << hash[number] << endl ;
+        cout <<"The number apper times  ---> "<< hash[number] << endl ;
     }
     return 0 ;
 }
