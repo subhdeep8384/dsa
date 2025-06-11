@@ -22,7 +22,7 @@ vector<vector<int>> function1(int ind , vector<int> &ds , vector<int> &arr , int
 int main(){
 
     vector<int>ds ;
-    vector<int>arr = {2 , 3, 6, 7} ;
+    vector<int>arr = {2 , 3, 6, 7 } ;
     vector<vector<int>> ans ;
 
     vector<vector<int>> ansss =  function1(0 , ds , arr , 10 , ans );
