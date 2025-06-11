@@ -19,11 +19,15 @@ vector<vector<int>> combinationSum(int ind , vector<int> &ds , vector<int>&arr ,
     }
     combinationSum(ind + 1 , ds , arr , target , ans ) ;
     return ans ;
+
+    // if(ans.size() == 0 ){
+    //     cout << "NO" ;
+    // }
 }
 
 int main() {
     vector<int>arr = {2,3,6,7 , 10} ;
-    int target = 17 ;
+    int target = 10;
     vector<int> ds ;
     vector<vector<int>> ans ;
     vector<vector<int>> a = combinationSum(0 ,  ds , arr , target , ans   );
