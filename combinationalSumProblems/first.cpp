@@ -22,10 +22,10 @@ vector<vector<int>> function1(int ind , vector<int> &ds , vector<int> &arr , int
 int main(){
 
     vector<int>ds ;
-    vector<int>arr = {2 , 3, 6, 7 } ;
+    vector<int>arr = {1 , 1 , 1 ,2  , 2 };
     vector<vector<int>> ans ;
 
-    vector<vector<int>> ansss =  function1(0 , ds , arr , 10 , ans );
+    vector<vector<int>> ansss =  function1(0 , ds , arr , 4, ans );
     for (auto it : ansss){
         for(auto ii : it ){
             cout << ii << "  ";
