@@ -3,10 +3,10 @@
 #include<algorithm>
 using namespace std ;
 
-void subset( int index , vector<int> &arr , int sum ,vector<int> &ans   ){
+void subset( int index , vector<int> &arr , int sum  ,vector<int> &ans   ){
     
     
-    if  ( index ==  arr.size() ){
+    if  ( index >=  arr.size() ){
         ans.push_back(sum) ;
     
         return ;
