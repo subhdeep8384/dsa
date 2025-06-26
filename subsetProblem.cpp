@@ -25,6 +25,6 @@ int main() {
     subset(0 ,  arr , 0  , ans );
 
     for(auto it : ans ){
-        cout << it << endl ;
+        cout << it << " " ;
     }
 }
