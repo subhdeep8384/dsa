@@ -7,7 +7,7 @@ using namespace std ;
 void  function(int index , vector<int> &ds, vector<int> &nums, vector<vector<int>>&ans ){   ans.push_back(ds) ;
 
 for(int i = index ; i < nums.size() ; i++ ){
-    if(i != index && nums[i] == nums[i -1 ] )continue; 
+    if(i != index && nums[i] == nums[ i -1 ] )continue; 
 
     ds.push_back(nums[i]) ;
     function(i + 1 , ds, nums , ans ) ;
