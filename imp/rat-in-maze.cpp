@@ -41,5 +41,8 @@ vector<string> findPath(vector<vector<int>> &m , int n ){
     vector<string> ans ;
     vector<vector<int>> vis(n , vector<int> (n , 0 )) ;
     if(m[0][0] == 1 ){solve(0 , 0 , m , n , ans , "" , vis );}
+    return ans ;
 }
-int main() {}
+int main() {
+    
+}

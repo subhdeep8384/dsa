@@ -5,7 +5,7 @@ using namespace std ;
 vector<int> bfs(vector<vector<int>> &adj){
     int v = adj.size() ; // isme 5 aagya 
 
-    int s = 0 ; // source 0 ho gya 
+    int s = 2 ; // source 0 ho gya 
 
     vector<int> res ;
 
