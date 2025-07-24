@@ -31,7 +31,7 @@ int frogTab(int ind  , vector<int> &cost , vector<int> &dp ){
     dp[0] = 0 ; 
     int left = INT32_MAX ;
     int right = INT32_MAX ;
-    for(int i = 1 ; i <= 2   ; i++ ){
+    for(int i = 1 ; i < cost.size()    ; i++ ){
         left = dp[i - 1] + abs(cost[i] - cost[i-1]) ;
 
         if(i > 1 ){
@@ -40,6 +40,25 @@ int frogTab(int ind  , vector<int> &cost , vector<int> &dp ){
         dp[i] = min(left , right ) ;
     }
     return dp[cost.size() - 1] ;
+}
+
+
+int frogOpt(int ind  , vector<int> &cost , vector<int> &dp ){
+    dp[0] = 0 ; 
+    int left = INT32_MAX ;
+    int right = INT32_MAX ;
+    int curr , prev1 = 0  , prev2 = 0   ;
+    for(int i = 1 ; i < cost.size()   ; i++ ){
+        left = prev1 + abs(cost[i] - cost[i-1]) ;
+
+        if(i > 1 ){
+            right = prev2 + abs(cost[i -2] - cost[i]) ;
+        }
+        curr = min(left , right ) ;
+        prev2 = prev1 ;
+        prev1 = curr ;
+    }
+    return prev1 ;
 }
 int main(){
     vector<int> cost = {30 , 10, 20} ;
@@ -51,5 +70,7 @@ int main(){
 
     cout << "Answer of tabulation is :: " ;
     int ans2 = frogTab(0 , cost , dp ) ;
-    cout << endl << ans2 ;
+
+    int ans3 = frogOpt(0 , cost , dp ) ;
+    cout << endl << ans2  << "   " << ans3 ;
 }
