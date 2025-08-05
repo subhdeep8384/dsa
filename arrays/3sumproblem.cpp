@@ -21,6 +21,7 @@ list<list<int>> threeSumProblem(vector<int> &arr , list<list<int>> &ans , set<se
                 }
             }
         }
+        ans.push_back(st.begin() , st.end()) ;
         return ans ;
     }
 }
