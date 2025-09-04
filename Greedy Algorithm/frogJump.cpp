@@ -17,7 +17,7 @@ int frogJump(vector<int> arr)
 }
 
 int main() {
-    vector<int> arr = {0, 0, 0, 0, 4};
+    vector<int> arr = {2, 1, 4, 0, 4};
     int result = frogJump(arr);
     cout << result;
     return 0;
