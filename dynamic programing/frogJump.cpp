@@ -62,7 +62,7 @@ int frogOpt(int ind  , vector<int> &cost , vector<int> &dp ){
 }
 int main(){
     vector<int> cost = {30 , 10, 20} ;
-     vector<int> dp(3 , -1 ) ;
+    vector<int> dp(3 , -1 ) ;
     int ans = frogJump(2 , cost) ;
 
     int ans1 = frogMemo(2 , cost , dp ) ;

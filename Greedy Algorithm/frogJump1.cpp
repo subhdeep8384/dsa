@@ -39,12 +39,31 @@ int memo(vector<int> &arr, vector<int> &dp, int index) {
 
     return dp[index] = mini;
 }
+
+int optimalSolution(vector<int> &arr) {
+    int jumps = 0 ;
+    int left = 0 ; 
+    int right = 0 ; 
+
+    while(right < arr.size() - 1 ) {
+        int farthest = 0 ;
+        for(int i = left ; i <= right ; i++ ){
+            farthest = max(farthest , i + arr[i] ) ;
+        }
+        jumps+= 1 ;
+        left = right + 1 ;
+        right = farthest ;
+    }
+    return jumps ;
+}
 int main(){
-    vector<int> arr = {2 , 1 , 1 };
+    vector<int> arr = {2, 3, 1, 4, 1, 1, 1, 2 };
     int result = frogJump(arr , 0 , 0);
     cout << result << endl  ;
 
     vector<int> dp(arr.size() , -1 ) ;
     int ans = memo(arr, dp , 0 );
-    cout << ans ;
+    cout << ans  << endl ;
+    int ans1 = optimalSolution(arr);
+    cout << ans1 ;
 }
