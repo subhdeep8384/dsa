@@ -72,11 +72,11 @@ int SpaceOpt(vector<int> &nums ){
 
 int main(){
     vector<int> arr = {
-    12 , 3 , 2 , 15 , 1
+    12 , 3 , 2 , 1 , 11
 };
     int size = arr.size() ;
-    // int ans = NonAdjacentMaxSum(size - 1 , arr) ;
-    // cout << ans  ;
+    int ans = NonAdjacentMaxSum(size - 1 , arr) ;
+    cout <<"By recurssion : " << ans  << endl;
 
 
     vector<int> dp(size  , - 1 ) ;
