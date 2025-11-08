@@ -13,7 +13,6 @@ int maxFallingPathSum(vector<vector<int>>& path, int i , int j ){
     int rightDigonal = path[i][j] + maxFallingPathSum(path , i -1 , j + 1 ) ;
 
     int maxi = max(up , max(leftDigonal , rightDigonal )) ;
-
     return maxi ;
 }
 
