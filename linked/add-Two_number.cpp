@@ -1,11 +1,13 @@
-struct  ListNode 
+
+#include<iostream>
+using namespace std;
+
+int main()
 {
-    /* data */
-};
-
-
-class solution {
-    public : 
-    ListNode * addTwoNumbers(ListNode * L1 , ListNode * L2){
-
-    }
+    int a,b,c;
+    cout<<"Enter two numbers:";
+    cin>>a>>b;
+    c=a+b;
+    cout<<"Sum of two numbers is:"<<c;
+    return 0;
+}   
