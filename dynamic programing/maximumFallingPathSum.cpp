@@ -21,13 +21,13 @@ int maxFallingPathSumMEMO(vector<vector<int>>& path, int i , int j , vector<vect
     int m = path[0].size(); 
 
 
-    if(  dp[i][j] != -1   ) return dp[i][j] ;
     if( j < 0 || j >= m  ) return INT16_MIN ;    
     if( i == 0  ) return path[0][j] ;
+    if(  dp[i][j] != -1   ) return dp[i][j] ;
 
-    int up = path[i][j] + maxFallingPathSum(path , i -1 , j ) ;
-    int leftDigonal = path[i][j] + maxFallingPathSum(path , i - 1 , j -1 ) ;
-    int rightDigonal = path[i][j] + maxFallingPathSum(path , i -1 , j + 1 ) ;
+    int up = path[i][j] + maxFallingPathSumMEMO(path , i -1 , j , dp ) ;
+    int leftDigonal = path[i][j] + maxFallingPathSumMEMO(path , i - 1 , j - 1  , dp) ;
+    int rightDigonal = path[i][j] + maxFallingPathSumMEMO(path , i -1 , j + 1 , dp) ;
 
     int maxi = dp[i][j] = max(up , max(leftDigonal , rightDigonal )) ;
 
@@ -45,6 +45,7 @@ int main() {
 
     int ans = INT16_MIN;
     int ans1 = INT16_MIN;
+
     for (int j = 0; j < path[0].size(); j++) {
         ans = max(ans, maxFallingPathSum(path, 3, j ));
         ans1 = max(ans1, maxFallingPathSumMEMO(path, 3, j , dp  ));

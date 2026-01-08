@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+#include<unordered_map>
 using namespace std ;
 
 int main (){
@@ -13,9 +14,7 @@ int main (){
     }
 
     // precompute 
-
-
-    map<int , int > m ; 
+    unordered_map<int , int > m ; 
     for(int i = 0 ; i < n ; i++ ){
         m[arr[i]]++ ;
     }
