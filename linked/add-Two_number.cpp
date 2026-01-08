@@ -9,6 +9,3 @@ class solution {
     ListNode * addTwoNumbers(ListNode * L1 , ListNode * L2){
 
     }
-
-    function add  (){}
-};
