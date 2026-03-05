@@ -121,6 +121,21 @@ public:
         }
         cout << endl;
     }
+    void search(int value)
+    {
+        Node *temp = head;
+        int position = 0;
+        while (temp != NULL)
+        {
+            if (temp->data == value)
+            {
+                cout << "Element found at position " << position << endl;
+                return;
+            }
+            position++;
+            temp = temp->next;
+        }
+    }
 };
 
 int main()
@@ -137,4 +152,5 @@ int main()
     ll.print();
     ll.insert(7, 2);
     ll.print();
+    ll.search(7);
 }
